@@ -1,0 +1,48 @@
+{%extends "layout.html" %}
+{% block Content %}
+<form action="/prd" method="post">
+
+  <label>Passenger ID-</label><input type="text" name="PID"><br>
+
+  <label>Passenger Class-</label><input type="text" name="PC"><br>
+
+  <label>Sex-</label>
+  <select name="sex">
+    <option value="none" selected disabled hidden>Select an Option</option>
+    <option value="male">Male</option>
+    <option value="female">Female</option>
+  </select>
+  <br>
+
+  <label>Age-</label><input type="text" name="age"><br>
+
+  <label>Fare-</label><input type="text" name="fare"><br>
+
+  <label>Siblings/Spouse-</label><input type="text" name="SbSp"><br>
+
+  <label>Parch-</label>
+  <select name="parch">
+    <option value="none" selected disabled hidden>Select an Option</option>
+    {% for var in range(0,7) %}
+    <option value={{var}}>{{var}}</option>
+    {% endfor %}
+  </select>
+  <br>
+
+  <label>Embarked-</label>
+  <select name="emb">
+    <option value="none" selected disabled hidden>Select an Option</option>
+    <option value="S">Southampton</option>
+    <option value="C">Cherbourg</option>
+    <option value="C">Queenstown</option>
+  </select>
+  <br>
+  <input type="submit">
+</form>
+<br>
+{% if pred!=0 %}
+             
+<p>Predicted outcome-{{pred}}</p>
+
+{% endif %}
+{% endblock %}
