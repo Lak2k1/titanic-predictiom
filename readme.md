@@ -5,4 +5,4 @@
 3. [VSCodeIDE](https://code.visualstudio.com/)
 4. [GitCLI](https://git-scm.com/book/en/v2/Getting-Started-The-Command-Line)
 
-link to app-https://tpred1.herokuapp.com/
+link to app-http://ec2-3-113-33-167.ap-northeast-1.compute.amazonaws.com/
